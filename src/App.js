@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import {AppContext,defaultObject} from './react-Contex-klasowe-komponenty/AppContext';
+import Button from './react-Contex-klasowe-komponenty/Button';
+import UserInfo from './react-Contex-klasowe-komponenty/UserInfo';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  state = { 
+    isUserLogged:defaultObject.isUserLogged,
+   }
+   hadleToggleStateIsLogged=()=>{
+     // eslint-disable-next-line no-labels
+     this.setState((prevState)=>({isUserLogged: !prevState.isUserLogged}));
+   }
+  render() { 
+    return ( 
+      
+      <div>
+        <AppContext.Provider value={{
+          isUserLogged:this.state.isUserLogged,
+          toggleLoggedState:this.hadleToggleStateIsLogged
+        }}>
+          <UserInfo/>
+          <Button/>
+        </AppContext.Provider>
+      </div>
+     );
+  }
 }
-
+ 
 export default App;
