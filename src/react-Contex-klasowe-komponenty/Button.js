@@ -3,20 +3,14 @@ import { AppContext } from './AppContext';
 
 class Button extends Component {
     state = {  }
+
+    static contextType=AppContext;
     render() { 
         return ( 
-            <AppContext.Consumer>
-                {
-                    ({toggleLoggedState})=>{
-                        return (
-                            <button onClick={toggleLoggedState}>
-                                Przełacz stan uzytkownika
-                            </button>
-                        )
-                    }
-                }
-            
-            </AppContext.Consumer>
+            <button onClick={this.context.toggleLoggedState}>
+                Przełacz stan uzytkownika
+            </button>
+
          );
     }
 }
