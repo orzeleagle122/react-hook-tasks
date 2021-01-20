@@ -1,30 +1,17 @@
 import React, { Component } from 'react';
-import {AppContext,defaultObject} from './react-Contex-klasowe-komponenty/AppContext';
-import Button from './react-Contex-klasowe-komponenty/Button';
-import UserInfo from './react-Contex-klasowe-komponenty/UserInfo';
+import App1 from './react-Contex-klasowe-komponenty/App1';
+import App2 from './useContext-hook/App2';
 
-class App extends Component {
-  state = { 
-    isUserLogged:defaultObject.isUserLogged,
-   }
-   hadleToggleStateIsLogged=()=>{
-     // eslint-disable-next-line no-labels
-     this.setState((prevState)=>({isUserLogged: !prevState.isUserLogged}));
-   }
-  render() { 
-    return ( 
-      
-      <div>
-        <AppContext.Provider value={{
-          isUserLogged:this.state.isUserLogged,
-          toggleLoggedState:this.hadleToggleStateIsLogged
-        }}>
-          <UserInfo/>
-          <Button/>
-        </AppContext.Provider>
-      </div>
-     );
-  }
+const App = () => {
+  return ( 
+    <div>
+      <h3>react Context w kompomencie klasowym</h3>
+      <App1/>
+      <h3>react Context w komponencie fukcyjnym - Hooki</h3>
+      <App2/>
+    </div>
+
+   );
 }
  
 export default App;
