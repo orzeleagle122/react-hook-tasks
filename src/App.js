@@ -3,6 +3,7 @@ import App1 from './react-Contex-klasowe-komponenty/App1';
 import App2 from './useContext-hook/App2';
 import App3 from './Store/App3';
 import App4 from './createRef/App4';
+import App5 from './useRef/App5';
 import Counter from './createRef/Counter';
 
 const App = () => {
@@ -18,6 +19,9 @@ const App = () => {
       <App4/>
       <h3>createRef-counter</h3>
       <Counter/>
+      <h3>createRef</h3>
+      <App5/>
+
     </div>
 
    );

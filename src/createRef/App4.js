@@ -14,7 +14,6 @@ class App4 extends Component {
     }
 
     render() { 
-        console.log(this.textInput);
         return ( 
             <>
                 <input type="text" ref={this.textInput} />
