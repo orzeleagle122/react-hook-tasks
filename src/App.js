@@ -5,10 +5,13 @@ import App3 from './Store/App3';
 import App4 from './createRef/App4';
 import App5 from './useRef/App5';
 import Counter from './createRef/Counter';
+import App6 from './useReducer/App6';
 
 const App = () => {
   return ( 
     <div>
+      <h3>useReducer</h3>
+      <App6/>
       <h3>react Context w kompomencie klasowym</h3>
       <App1/>
       <h3>react Context w komponencie fukcyjnym - Hooki</h3>
