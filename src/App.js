@@ -6,10 +6,13 @@ import App4 from './createRef/App4';
 import App5 from './useRef/App5';
 import Counter from './createRef/Counter';
 import App6 from './useReducer/App6';
+import App7 from './useMemo/App7';
 
 const App = () => {
   return ( 
     <div>
+      <h3>useMemo</h3>
+      <App7/>
       <h3>useReducer</h3>
       <App6/>
       <h3>react Context w kompomencie klasowym</h3>
